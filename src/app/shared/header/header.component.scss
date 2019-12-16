@@ -1,8 +1,11 @@
 .navbar{
-  background-color: red($color: #be0d0d);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
   min-height: 100px;
 }
+.nav-color{
+  background-color: white;
+}
+
 .navbar-brand{
   color: black;
   font-family:'Pacifico', cursive;

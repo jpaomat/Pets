@@ -1,0 +1,23 @@
+.content-center{
+  text-align: center;
+}
+section{
+  padding: 90px 0;
+}
+.portafolio-container{
+  position: relative;
+  overflow: hidden;
+  margin: 10px 0;
+  border-radius: 3px;
+  max-height: 300px;
+}
+.portafolio-container img{
+  -moz-transition: all 0.8s;
+  -webkit-transition: all .8s;
+  transition: all .8s;
+}
+.portafolio-container:hover img{
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
