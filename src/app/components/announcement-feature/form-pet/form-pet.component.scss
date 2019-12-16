@@ -1,5 +1,24 @@
 .content-center{
   text-align: center;
   font-family:'Pacifico', cursive;
-  
+}
+#aviso{
+  color: red($color: #fd1111);
+}
+
+
+input,select{
+  border: 0;
+  background-color: #E1E1E1;
+  border-bottom:2px solid rgb(7, 7, 7);
+  border-radius: 3px
+}
+input:focus, select:focus,  select:active, input:active{
+  box-shadow: none;
+  background-color: #E1E1E1;
+  border-bottom: 2px solid #107c6a
+}
+.alertt{
+  color: #942D46;
+  font-size: 12px;
 }
