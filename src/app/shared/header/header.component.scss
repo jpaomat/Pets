@@ -1,19 +1,21 @@
 .navbar{
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
   min-height: 100px;
+  background: url(../../../assets/images/huella.jpg);
+  margin-left: auto;
+  margin-right: auto;
+  background-size: 15%;
 }
-.nav-color{
+/*.nav-color{
   background-color: white;
-}
-
+}*/
 .navbar-brand{
-  color: black;
+  color: white;
   font-family:'Pacifico', cursive;
   font-size: large;
 }
 .nav-link{
-  color: black;
-}
-.nav-link:hover{
-  color: red($color: #23a8a8);
+  color: rgb(220, 250, 248);
+  font-family: 'Lobster', cursive;
+  font-size: 23px;
 }
