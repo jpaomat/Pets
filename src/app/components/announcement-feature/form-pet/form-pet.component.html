@@ -114,16 +114,25 @@
       </div>
     </div>
   </div>
-  <div class="row form-group content-center py-3">  
-    <hr>
+  <div class="form-row form-group content-center" id="form-react">  
+    <div class="form-group col-md-6 mb-3">
+      <label for="">Pais</label>
+      <select id="world" name="world" class="form-control" formControlName="world" required>
+        <option selected>Seleccione pais</option>
+        <option *ngFor="let world of worlds; index as i ">
+          {{world.name}}
+        </option>
+      </select>
+      <div class="alertt" *ngIf="world.invalid && (world.dirty ||   world.touched)">
+        Seleccione el pais
+      </div>
+    </div>
     <div class="col-md-6">
-      <input type="text" class="form-control">
+      <label class="px-5" for="">Imagen</label>
+      <button class="btn btn-success px-5"> cargar foto</button>
     </div>
-    <div class="col-md-3">
-      <button class="btn btn-success px-3"> cargar foto</button>
-    </div>
-    <div class="col-md-3">
-      <button type="submit" class="btn btn-danger px-3">Enviar</button>
-    </div>
+  </div>
+  <div class="col-md-12 content-center">
+    <button type="submit" class="btn btn-dark p-3" [disabled]="registerForm.invalid">Enviar</button>
   </div>
 </form>

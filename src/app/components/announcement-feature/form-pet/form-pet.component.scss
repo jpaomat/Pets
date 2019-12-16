@@ -2,11 +2,6 @@
   text-align: center;
   font-family:'Pacifico', cursive;
 }
-#aviso{
-  color: red($color: #fd1111);
-}
-
-
 input,select{
   border: 0;
   background-color: #E1E1E1;
@@ -21,4 +16,8 @@ input:focus, select:focus,  select:active, input:active{
 .alertt{
   color: #942D46;
   font-size: 12px;
+}
+.btn-image{
+  background-color: green($color: #ecee6e);
+  border-radius: initial;
 }

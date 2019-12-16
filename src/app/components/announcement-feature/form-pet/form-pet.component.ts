@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { CustomValidators } from 'src/app/utils/custom-validator';
+import { environment } from 'src/environments/environment';
+import { World } from 'src/app/shared/interfaces/world';
+import { PeticionesService } from 'src/app/shared/services/peticiones.service';
 
 @Component({
   selector: 'app-form-pet',
@@ -9,7 +11,9 @@ import { CustomValidators } from 'src/app/utils/custom-validator';
 })
 export class FormPetComponent implements OnInit {
 
-  constructor( private formBuilder: FormBuilder) { }
+  worldURL=environment.worldUrl;
+  worldsComplete:World[];
+  constructor( private peticionesService: PeticionesService, private formBuilder: FormBuilder) { }
 
   get tituloPost(){
     return this.registerForm.get('tituloPost');
@@ -44,7 +48,9 @@ export class FormPetComponent implements OnInit {
   get celular(){
     return this.registerForm.get('celular');
   }
-  
+  get world(){
+    return this.registerForm.get('world');
+  }
   registerForm= this.formBuilder.group({
     tituloPost:['',{
       validators:[Validators.required,Validators.pattern("[a-zA-ZñÑáéíóúÁÉÍÓÚ/s]+")]
@@ -67,9 +73,18 @@ export class FormPetComponent implements OnInit {
     celular:['',{
       validators:[ Validators.required, Validators.minLength(10), Validators.maxLength(10)]
     }],
-  })
-
+    world:['',Validators.required],
+  });
+  worlds: any[] = [];
   ngOnInit() {
+    this.peticionesService.httpGet(this.worldURL).subscribe((record: World[]) => {
+      this.worldsComplete = record;
+      for (let item in this.worldsComplete) {
+        this.worlds.push(
+          { name: this.worldsComplete[item].name }
+        )
+      }
+    }, err => console.error(err))
   }
   saveForm() {
     console.log(this.registerForm.value);
