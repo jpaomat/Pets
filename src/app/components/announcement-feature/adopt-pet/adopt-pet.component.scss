@@ -1,0 +1,26 @@
+.main-section{
+  background-image: url(../../../../assets/images/fondo5.jpg);
+  min-height: 190vh;
+  background-size: cover;
+  position: relative;
+}
+.section-pad{
+  padding: 90px 0;
+}
+.backgorund-overlay{
+  background-color: rgba(116, 110, 110, 0.295);
+  height: 92%;
+  width: 100%;
+  position: absolute;
+}
+.container-form .card-head{
+  font-family: Arial, Bold-italic;
+  color: black;
+  font-size: 1.25rem
+}
+.card{
+  background-color: rgba(219, 217, 217, 0.76);
+}
+h4{
+  font-family:'Pacifico', cursive;
+}

@@ -1,0 +1,92 @@
+<form (ngSubmit)="saveForm()" [formGroup]="registerForm">
+  <div class=" row form-group content-center">
+    <div class="col-md-12">
+      <label for="">Titulo del post(*)</label>
+      <input type="text" class="form-control" placeholder="Ej: Hermoso perro en adopción" formControlName="tituloPost">
+      <div
+        class="aviso" *ngIf="tituloPost.invalid && (tituloPost.dirty ||   tituloPost.touched)" >
+        <div *ngIf= "tituloPost.errors.required">
+          El titulo del post es requerido
+        </div>
+      </div>
+    </div>    
+  </div>
+  <div class="row form-group content-center">
+    <div class="col-md-6">
+      <label for="">Seleccione el tipo de mascota (*)</label>
+      <select id="typePet" name="typePet" class="form-control" formControlName="typePet">
+        <option selected>Tipo de mascota</option>
+        <option>Gato</option>
+        <option>Perro</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label for="">Nombre de la mascota(*)</label>
+      <input type="text" class="form-control" id="namePet" name="namePet" placeholder="Ej: Sacha" formControlName="namePet">
+    </div>
+  </div>
+  <div class=" row form-group content-center">
+    <div class="col-md-6">
+      <label for="">Raza de la mascota(*)</label>
+      <input type="text" class="form-control" id="racePet" name="racePet" placeholder="Ej: Criollo(a), pitbull, etc." formControlName="racePet">
+    </div>
+    <div class="col-md-6">
+      <label for="">Edad de la mascota(*)</label>
+      <input type="text" class="form-control" id="agePet" name="agePet" placeholder="Ej: 2 meses, 2años" formControlName="agePet">
+    </div>
+  </div>
+  <div class="row form-group content-center"> 
+    <div class="col-md-6">
+      <label for="">Seleccione el sexo (*)</label>
+      <select id="generoPet" name="generoPet" class="form-control" formControlName="generoPet">
+        <option>Hembra</option>
+        <option>Macho</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label for="">Vacunas (*)</label>
+      <select id="vaccinePet" name="vaccinePet" class="form-control" formControlName="vaccinePet">
+        <option>Ninguna</option>
+        <option>Solo las de inicio</option>
+        <option>Al día</option>
+        <option>No sabe</option>
+      </select>
+    </div>
+  </div>
+  <div class="row form-group content-center">
+    <div class="col-md-6">
+      <label for="">¿Esta esterilizada la mascota? (*)</label>
+      <select id="sterilizePet" name="sterilizePet" class="form-control" formControlName="sterilizePet">
+        <option>Si</option>
+        <option>No</option>
+        <option>No sabe</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label for="">¿Donde está ubicado?(*)</label>
+      <input type="text" class="form-control" id="locatedPet" name="locatedPet" placeholder="Ej: Cl. 45#27-07, Bogotá" formControlName="locatedPet">
+    </div>
+  </div>
+  <div class="row form-group content-center">
+    <div class="col-md-6">
+      <label for="">Ingrese correo electrónico(*)</label>
+      <input type="text" class="form-control" id="email" name="email" placeholder="Ej: mascota@gmail.com" formControlName="email">
+    </div>
+    <div class="col-md-6">
+      <label for="">Telefono</label>
+      <input formControlName="celular" class="form-control" placeholder="Celular" type="text"/>
+    </div>
+  </div>
+  <div class="row form-group content-center py-3">  
+    <hr>
+    <div class="col-md-6">
+      <input type="text" class="form-control">
+    </div>
+    <div class="col-md-3">
+      <button class="btn btn-success px-3"> cargar foto</button>
+    </div>
+    <div class="col-md-3">
+      <button type="submit" class="btn btn-danger px-3">Enviar</button>
+    </div>
+  </div>
+</form>
