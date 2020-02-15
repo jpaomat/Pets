@@ -5,7 +5,6 @@ import { IntroductionSectionComponent } from './introduction-section/introductio
 
 const routes: Routes = [
   {path:'', component:IntroductionSectionComponent},
-  
 ];
 
 @NgModule({
