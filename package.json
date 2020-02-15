@@ -21,6 +21,8 @@
     "@angular/router": "~8.2.4",
     "@fortawesome/fontawesome-free": "5.12.0",
     "@ng-bootstrap/ng-bootstrap": "^5.1.4",
+    "@ngrx/store": "^8.6.0",
+    "@ngrx/store-devtools": "^8.6.0",
     "@types/jquery": "^3.3.31",
     "bootstrap": "^4.4.1",
     "font-awesome": "^4.7.0",
